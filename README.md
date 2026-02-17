@@ -10,5 +10,6 @@ A collection of Digital VLSI projects moving from **RTL Design** to **GDSII Sili
 - **Physical Design**: OpenLane (Sky130 PDK)
 
 ## Projects
-1. **[mux2to1](./mux2to1)**: Basic combinational logic flow. (Complete)
+1. **[mux2to1](./mux2to1)**: Basic combinational logic flow.
+2. **[counter4bit].(./counter4bit)**
 
