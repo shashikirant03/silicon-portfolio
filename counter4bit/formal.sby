@@ -1,0 +1,9 @@
+[options]
+mode prove
+[engines]
+smtbmc z3
+[script]
+read -sv counter4bit.v
+prep -top counter4bit
+[files]
+counter4bit.v
