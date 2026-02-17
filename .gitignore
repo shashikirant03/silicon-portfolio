@@ -1,0 +1,16 @@
+# Simulation junk
+*.vcd
+*.vvp
+*.log
+
+# Formal junk (keep the script, hide the engine work)
+formal/*/
+
+# OpenLane junk (The biggest space hog)
+runs/
+openlane/runs/
+
+# Tool specific
+obj_dir/
+__pycache__/
+.DS_Store

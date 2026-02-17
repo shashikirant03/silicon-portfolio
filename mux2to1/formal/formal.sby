@@ -1,0 +1,12 @@
+[options]
+mode prove
+
+[engines]
+smtbmc z3
+
+[script]
+read -sv mux2to1.v
+prep -top mux2to1
+
+[files]
+mux2to1.v

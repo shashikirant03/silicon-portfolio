@@ -1,0 +1,9 @@
+{
+    "DESIGN_NAME": "mux2to1",
+    "VERILOG_FILES": "dir::mux2to1.v",
+    "CLOCK_PERIOD": 10,
+    "CLOCK_PORT": null,
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 50 50",
+    "PL_TARGET_DENSITY": 0.5
+}
