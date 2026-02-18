@@ -1,0 +1,7 @@
+# running in formal/src/
+read -sv alu.v
+prep -top alu
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

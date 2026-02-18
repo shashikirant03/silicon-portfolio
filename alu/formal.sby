@@ -1,0 +1,9 @@
+[options]
+mode prove
+[engines]
+smtbmc z3
+[script]
+read -sv alu.v
+prep -top alu
+[files]
+alu.v
