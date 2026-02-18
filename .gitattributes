@@ -1,0 +1,7 @@
+# Force .v files to be counted as Verilog
+*.v linguist-language=Verilog
+*.sv linguist-language=SystemVerilog
+
+# Ignore SBY/SMT files from language statistics
+*.sby linguist-vendored
+*.smt2 linguist-vendored
