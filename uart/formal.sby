@@ -1,0 +1,20 @@
+[options]
+mode bmc
+depth 100
+
+[engines]
+# We are changing this line to use Z3 (or you can try 'smtbmc boolector')
+smtbmc z3
+
+[script]
+read_verilog -formal uart_top.v uart_rx.v uart_tx.v
+# Overwrite parameters to make counters small (Fast Proof)
+chparam -set CLK_FREQ 40 -set BAUD_RATE 10 uart_top
+chparam -set CLK_FREQ 40 -set BAUD_RATE 10 uart_rx
+chparam -set CLK_FREQ 40 -set BAUD_RATE 10 uart_tx
+prep -top uart_top
+
+[files]
+uart_top.v
+uart_rx.v
+uart_tx.v
