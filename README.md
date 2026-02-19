@@ -19,7 +19,7 @@ The "Hello World" of Digital VLSI—focusing on the foundational OpenLane flow f
 **Level: Basic (Sequential)**
 A simple 4-bit synchronous counter project demonstrating basic sequential logic and simulation.
 
-### 3. [UART Controller: RTL to GDSII](./uart)
+### 3. [UART Controller](./uart)
 **Level: Intermediate (System Peripheral)**
 A fully verified UART (Universal Asynchronous Receiver-Transmitter) hardened for the SkyWater 130nm process.
 - **Verification**: Mathematically proven reset states and interface stability using **Formal Verification (SBY)**.
