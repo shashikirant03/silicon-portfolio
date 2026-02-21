@@ -1,25 +1,2 @@
-# Simulation junk
+*_sim
 *.vcd
-*.vvp
-*.log
-*.xml
-
-# Formal junk (keep the script, hide the engine work)
-formal/*/
-
-# OpenLane junk (The biggest space hog)
-runs/
-openlane/runs/
-results/
-reports/
-
-# Tool specific
-obj_dir/
-__pycache__/
-.DS_Store
-
-# Ignore Intermediate Synthesis files
-*.dot
-*.json
-*.lef
-*.gds
