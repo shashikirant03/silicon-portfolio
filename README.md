@@ -25,3 +25,6 @@ A fully verified UART (Universal Asynchronous Receiver-Transmitter) hardened for
 - **Verification**: Mathematically proven reset states and interface stability using **Formal Verification (SBY)**.
 - **Linting**: 100% clean under **Verilator -Wall**.
 - **Physical Design**: Successfully routed with a 40% core utilization and 50MHz timing closure.
+
+### 4. [CAN_Bus_Controller](./can_bus).
+- Under Development.
