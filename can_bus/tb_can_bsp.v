@@ -17,19 +17,20 @@ module tb_can_bsp();
     wire stuff_err;
 
     // 2. Instantiate your BSP
+    // Update the UUT instantiation in your testbench
     can_bsp uut (
         .clk(clk),
         .rst(rst),
         .sample_point(sample_point),
         .tx_point(tx_point),
         .rx_in(rx_in),
-        .tx_out(tx_out),
         .tx_data_in(tx_data_in),
-        .enable_stuffing(enable_stuffing),
+        .enable_tx_stuffing(enable_stuffing), // Map your old test signal to the new TX port
+        .enable_rx_stuffing(enable_stuffing), // Map it to RX too
+        .tx_out(tx_out),
         .rx_data_out(rx_data_out),
         .tx_stall(tx_stall),
-        .rx_stall(rx_stall),
-        .stuff_err(stuff_err)
+        .rx_stall(rx_stall)
     );
 
     // 3. System Clock
