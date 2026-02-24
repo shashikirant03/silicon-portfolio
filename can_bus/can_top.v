@@ -21,9 +21,13 @@ module can_top (
                       .enable_rx_stuffing(en_rx_stuf), .rx_valid(rx_valid), .rx_id(rx_id), .rx_data(rx_data),
                       .tx_idle(tx_idle), .rx_idle(rx_idle), .crc_in(crc_val), .crc_enable(crc_en), .crc_reset(crc_rst));
 
-    // THE CRITICAL FIX: Smart CRC Routing.
-    // If FSM says we are transmitting, compute CRC on tx_bit. If receiving, compute on rx_data_out.
-    wire crc_data_mux = en_tx_stuf ? tx_bit : rx_data_out;
+    // --- THE ULTIMATE CRC FIX ---
+    // 1. Mux: Transmitting nodes calculate on tx_bit. Receiving nodes calculate on rx_data_out.
+    wire crc_data_mux = tx_idle ? rx_data_out : tx_bit;
+    
+    // 2. The Metronome: AND the enable with sample_point. 
+    // This forces the CRC to only shift EXACTLY once per CAN bit!
+    wire crc_tick = crc_en & sample_point;
 
-    can_crc crc_inst (.clk(clk), .rst(crc_rst), .data_in(crc_data_mux), .enable(crc_en), .crc_reg(crc_val));
+    can_crc crc_inst (.clk(clk), .rst(crc_rst), .data_in(crc_data_mux), .enable(crc_tick), .crc_reg(crc_val));
 endmodule
