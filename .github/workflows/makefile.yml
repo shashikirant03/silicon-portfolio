@@ -1,27 +1,24 @@
-name: Makefile CI
+name: RTL Verification CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "feature-can-bus" ]
   pull_request:
     branches: [ "main" ]
 
 jobs:
-  build:
-
+  simulate:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-    - name: configure
-      run: ./configure
+    - name: Install Icarus Verilog
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y iverilog
 
-    - name: Install dependencies
+    - name: Run Distributed Math Network Testbench
+      working-directory: ./can_bus
       run: make
-
-    - name: Run check
-      run: make check
-
-    - name: Run distcheck
-      run: make distcheck
