@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module can_crc (
     input wire clk,
     input wire rst,
@@ -9,10 +11,11 @@ module can_crc (
         if (rst) begin
             crc_reg <= 15'h0;
         end else if (enable) begin
-            if (data_in ^ crc_reg[14])
+            if ((data_in ^ crc_reg[14]) == 1'b1) begin
                 crc_reg <= {crc_reg[13:0], 1'b0} ^ 15'h4599;
-            else
+            end else begin
                 crc_reg <= {crc_reg[13:0], 1'b0};
+            end
         end
     end
 endmodule
