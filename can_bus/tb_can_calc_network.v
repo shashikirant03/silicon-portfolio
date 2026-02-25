@@ -37,7 +37,7 @@ module tb_can_calc_network();
         tx_id_A = 11'h1A1; tx_data_A = 64'h12153524c0895e81;
         $display("ECU A Transmitting ID: %h Data: %h", tx_id_A, tx_data_A);
         
-        // THE FIX: Clear latches right before pressing the button!
+        // Clear latches right before pressing the button!
         rx_c_caught = 0; rx_a_caught = 0; 
         @(posedge clk) tx_req_A = 1; @(posedge clk) tx_req_A = 0;
 
@@ -51,7 +51,7 @@ module tb_can_calc_network();
         tx_id_B = 11'h2B2; tx_data_B = 64'h8484d609b1f05663;
         $display("ECU B Transmitting ID: %h Data: %h", tx_id_B, tx_data_B);
         
-        // THE FIX: Clear latches right before pressing the button!
+        // Clear latches right before pressing the button!
         rx_c_caught = 0; rx_a_caught = 0;
         @(posedge clk) tx_req_B = 1; @(posedge clk) tx_req_B = 0;
 
@@ -65,7 +65,7 @@ module tb_can_calc_network();
         tx_id_C = 11'h3C3; tx_data_C = stored_A + stored_B; 
         $display("ECU C Calculated Sum: %h", tx_data_C);
         
-        // THE FIX: Clear latches right before pressing the button!
+        // Clear latches right before pressing the button!
         rx_c_caught = 0; rx_a_caught = 0;
         @(posedge clk) tx_req_C = 1; @(posedge clk) tx_req_C = 0;
 
