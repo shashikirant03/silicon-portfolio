@@ -14,11 +14,11 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    - name: Install Icarus Verilog
+    - name: Install Tools (Icarus & Verilator)
       run: |
-        sudo apt-get update
-        sudo apt-get install -y iverilog
-
+              sudo apt-get update
+              sudo apt-get install -y iverilog verilator
+    
     - name: Run Distributed Math Network Testbench
       working-directory: ./can_bus
       run: make
