@@ -13,12 +13,12 @@ Core Achievements
 Hardware Architecture and Synthesis
 The design was flattened and synthesized using Yosys. The resulting hardware architecture requires 1,963 total logic cells and 299 registers to manage the protocol state, bit stuffing, and error checking.
 
-![CAN Architecture Block Diagram](~/silicon-portfolio/can_bus/can_top_block.png)
+![CAN Architecture Block Diagram](can_bus/can_top_block.png)
 
 Functional Verification and CI/CD
 The verification environment simulates a multi-node automotive network. The testbench proves that when multiple ECUs transmit simultaneously, the node with the lowest ID wins the bus without data corruption (CSMA/CD+AMP).
 
-![Waveform showing arbitration](~/silicon-portfolio/can_bus/outputs/can_bus_multi_node_GTKwaveform.png)
+![Waveform showing arbitration](can_bus/outputs/can_bus_multi_node_GTKwaveform.png)
 
 This project features a fully automated verification pipeline. On every push, GitHub Actions spins up an Ubuntu runner, installs Icarus Verilog, compiles the network, and asserts functional correctness.
 
@@ -30,10 +30,10 @@ The synthesized netlist was hardened into a physical silicon layout (GDSII) usin
 * Routing: TritonRoute (Zero DRC violations, Zero Timing violations)
 
 Silicon Layout (Macro View)
-![Full Chip Layout](~/silicon-portfolio/can_bus/outputs/can_top_full_layout.png)
+![Full Chip Layout](can_bus/outputs/can_top_full_layout.png)
 
 Standard Cell and Metal Routing (Micro View)
-![Zoomed Routing](~/silicon-portfolio/can_bus/outputs/can_top_zoomed_routing.png)
+![Zoomed Routing](can_bus/outputs/can_top_zoomed_routing.png)
 
 How to Run Locally
 
