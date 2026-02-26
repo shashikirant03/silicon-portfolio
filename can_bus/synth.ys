@@ -1,0 +1,27 @@
+# 1. Read files
+read_verilog can_btl.v
+read_verilog can_bsp.v
+read_verilog can_crc.v
+read_verilog can_fsm.v
+read_verilog can_top.v
+
+# 2. Hierarchy
+hierarchy -check -top can_top
+
+# 3. Draw the clean, high-level Block Diagram BEFORE flattening
+show -format png -prefix outputs/can_top_block -colors 2 -width can_top
+
+# 4. NOW flatten it for accurate gate counting
+flatten
+
+# 5. Synthesize to gates
+proc; opt
+fsm; opt
+memory; opt
+techmap; opt
+
+# (Notice we removed the second 'show' command here so it doesn't hang)
+
+# 6. Export and Stat
+write_verilog outputs/can_top_netlist.v
+stat

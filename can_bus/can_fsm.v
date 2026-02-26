@@ -45,13 +45,13 @@ module can_fsm (
   assign tx_data_to_bsp = (tx_state == ST_IDLE && rx_state == ST_ACK) ? 1'b0 :
          (tx_state == ST_IDLE) ? 1'b1 :
          (tx_state == ST_SOF)  ? 1'b0 :
-         (tx_state == ST_ARB)  ? latched_id[tx_bit_counter] :
+         (tx_state == ST_ARB)  ? latched_id[tx_bit_counter[3:0]] :
          (tx_state == ST_CTRL) ? ((tx_bit_counter >= 4) ? 1'b0 : latched_dlc[tx_bit_counter]) :
          (tx_state == ST_DATA) ? latched_data[tx_bit_counter] :
          (tx_state == ST_CRC)  ? crc_in[tx_bit_counter] : 1'b1;
 
   // TX STATE MACHINE
-  always @(posedge clk)
+always @(posedge clk)
   begin
     if (rst)
     begin
