@@ -15,18 +15,22 @@ A collection of Digital VLSI projects moving from **RTL Design** to **GDSII Sili
 
 A foundational project used to establish and verify the complete open-source RTL-to-GDSII EDA toolchain.
 
-### 2. [counter4bit](./counter4bit)
+### 2. [alu](./alu)
+
+A combinational compute block supporting standard arithmetic and bitwise operations.
+
+### 3. [counter4bit](./counter4bit)
 
 A simple 4-bit synchronous counter project demonstrating basic sequential logic and simulation.
 
-### 3. [UART Controller](./uart)
+### 4. [UART Controller](./uart)
 
 A fully verified UART (Universal Asynchronous Receiver-Transmitter) hardened for the SkyWater 130nm process.
 - **Verification**: Mathematically proven reset states and interface stability using **Formal Verification (SBY)**.
 - **Linting**: 100% clean under **Verilator -Wall**.
 - **Physical Design**: Successfully routed with a 40% core utilization and 50MHz timing closure.
 
-### 4. [CAN_Bus_Controller](./can_bus).
+### 5. [CAN_Bus_Controller](./can_bus).
 
 A cycle-accurate, multi-module CAN node demonstrating distributed network arbitration and high-density physical design.
 - **Verification**: Distributed multi-node testbench proving lossless bitwise arbitration (CSMA/CD+AMP).
