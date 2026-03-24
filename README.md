@@ -30,9 +30,17 @@ A fully verified UART (Universal Asynchronous Receiver-Transmitter) hardened for
 - **Linting**: 100% clean under **Verilator -Wall**.
 - **Physical Design**: Successfully routed with a 40% core utilization and 50MHz timing closure.
 
-### 5. [CAN_Bus_Controller](./can_bus).
+### 5. [CAN_Bus_Controller](./can_bus)
 
 A cycle-accurate, multi-module CAN node demonstrating distributed network arbitration and high-density physical design.
 - **Verification**: Distributed multi-node testbench proving lossless bitwise arbitration (CSMA/CD+AMP).
-- **Linting**: 100% clean under Verilator -Wall.
+- **Linting**: 100% clean under **Verilator -Wall**.
 - **Physical Design**: Successfully routed 1,535 logic cells with a 0.55 target density and 20ns timing closure.
+
+### 6. [APB UART Bridge](./apb_uart)
+
+An integrated IP block combining a **Universal Asynchronous Receiver-Transmitter** with an **AMBA 3 APB** interface for memory-mapped SoC communication.
+- **Verification**: Formally verified (SBY) APB state machine compliance and functionally simulated asynchronous data loopback.
+- **Linting**: 100% clean under **Verilator -Wall**.
+- **Physical Design**: Hardened for the **SkyWater 130nm** process (200x200µm die) with a 40% target density and 10ns clock period (100MHz).
+- **Sign-off**: Achieved 0 Magic DRC violations, LVS clean status, and resolved plasma manufacturing hazards by implementing heuristic diode insertion (0 Antenna violations).
