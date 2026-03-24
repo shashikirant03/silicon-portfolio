@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-// Tell Verilator we intentionally ignore the upper bits of our 32-bit bus
+// Tells Verilator we intentionally ignore the upper bits of our 32-bit bus
 /* verilator lint_off UNUSEDSIGNAL */
 
 module apb_uart (
@@ -148,8 +148,6 @@ module apb_uart (
       assert(PREADY == 1'b1);
       assert(PSLVERR == 1'b0);
 
-      // --- THE $past() FIX ---
-      // Prove that if tx_start is high today, the bus signals were high YESTERDAY.
       if (tx_start == 1'b1)
       begin
         assert($past(PSEL) == 1'b1);
