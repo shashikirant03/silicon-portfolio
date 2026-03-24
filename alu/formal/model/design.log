@@ -1,0 +1,310 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: alu.v
+Parsing SystemVerilog input from `alu.v' to AST representation.
+Storing AST representation for module `$abstract\alu'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\alu'.
+Generating RTLIL representation for module `\alu'.
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \alu
+
+2.2.2. Analyzing design hierarchy..
+Top module:  \alu
+Removing unused module `$abstract\alu'.
+Removed 1 unused modules.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$alu.v:7$1 in module alu.
+Removed a total of 0 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\alu.$proc$alu.v:7$1'.
+     1/1: $1\result[64:0]
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\alu.\result' from process `\alu.$proc$alu.v:7$1'.
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\alu.$proc$alu.v:7$1'.
+Removing empty process `alu.$proc$alu.v:7$1'.
+Cleaned up 1 empty switch.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu.
+<suppressed ~1 debug messages>
+
+2.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+2.6. Executing CHECK pass (checking for obvious problems).
+Checking module alu...
+Found and reported 0 problems.
+
+2.7. Executing OPT pass (performing simple optimizations).
+
+2.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu.
+
+2.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu.
+Performed a total of 0 changes.
+
+2.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu'.
+Removed a total of 0 cells.
+
+2.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+2.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu.
+
+2.7.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+2.7.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \alu.
+Performed a total of 0 changes.
+
+2.7.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu'.
+Removed a total of 0 cells.
+
+2.7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu..
+
+2.7.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu.
+
+2.7.14. Finished OPT passes. (There is nothing left to do.)
+
+2.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 63 bits (of 64) from mux cell alu.$ternary$alu.v:39$20 ($mux).
+Removed top 63 bits (of 64) from mux cell alu.$ternary$alu.v:41$22 ($mux).
+Removed top 63 bits (of 64) from mux cell alu.$ternary$alu.v:43$24 ($mux).
+Removed top 63 bits (of 64) from mux cell alu.$ternary$alu.v:45$26 ($mux).
+Removed top 63 bits (of 64) from mux cell alu.$ternary$alu.v:47$28 ($mux).
+Removed top 63 bits (of 64) from mux cell alu.$ternary$alu.v:49$30 ($mux).
+Removed top 64 bits (of 65) from port B of cell alu.$or$alu.v:51$32 ($or).
+Removed top 64 bits (of 65) from port Y of cell alu.$or$alu.v:51$32 ($or).
+Removed top 64 bits (of 65) from port A of cell alu.$or$alu.v:51$34 ($or).
+Removed top 64 bits (of 65) from port Y of cell alu.$or$alu.v:51$34 ($or).
+Removed top 64 bits (of 65) from port A of cell alu.$and$alu.v:51$35 ($and).
+Removed top 64 bits (of 65) from port B of cell alu.$and$alu.v:51$35 ($and).
+Removed top 64 bits (of 65) from port Y of cell alu.$and$alu.v:51$35 ($and).
+Removed top 64 bits (of 65) from port Y of cell alu.$and$alu.v:55$42 ($and).
+Removed top 64 bits (of 65) from port Y of cell alu.$or$alu.v:57$43 ($or).
+Removed top 64 bits (of 65) from port Y of cell alu.$xor$alu.v:59$44 ($xor).
+Removed top 64 bits (of 65) from port A of cell alu.$not$alu.v:61$46 ($not).
+Removed top 64 bits (of 65) from port A of cell alu.$not$alu.v:63$48 ($not).
+Removed top 64 bits (of 65) from port A of cell alu.$not$alu.v:65$50 ($not).
+Removed top 63 bits (of 64) from mux cell alu.$ternary$alu.v:67$52 ($mux).
+Removed top 63 bits (of 64) from mux cell alu.$ternary$alu.v:69$54 ($mux).
+Removed top 63 bits (of 64) from mux cell alu.$ternary$alu.v:71$56 ($mux).
+Removed top 63 bits (of 64) from mux cell alu.$ternary$alu.v:73$58 ($mux).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$61_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$62_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$63_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$64_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$65_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$66_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$67_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$68_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$69_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$70_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$71_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$72_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$73_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$74_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$75_CMP0 ($eq).
+Removed top 1 bits (of 6) from port B of cell alu.$procmux$76_CMP0 ($eq).
+Removed top 2 bits (of 6) from port B of cell alu.$procmux$77_CMP0 ($eq).
+Removed top 2 bits (of 6) from port B of cell alu.$procmux$78_CMP0 ($eq).
+Removed top 2 bits (of 6) from port B of cell alu.$procmux$79_CMP0 ($eq).
+Removed top 2 bits (of 6) from port B of cell alu.$procmux$80_CMP0 ($eq).
+Removed top 2 bits (of 6) from port B of cell alu.$procmux$81_CMP0 ($eq).
+Removed top 2 bits (of 6) from port B of cell alu.$procmux$82_CMP0 ($eq).
+Removed top 2 bits (of 6) from port B of cell alu.$procmux$83_CMP0 ($eq).
+Removed top 2 bits (of 6) from port B of cell alu.$procmux$84_CMP0 ($eq).
+Removed top 3 bits (of 6) from port B of cell alu.$procmux$85_CMP0 ($eq).
+Removed top 3 bits (of 6) from port B of cell alu.$procmux$86_CMP0 ($eq).
+Removed top 3 bits (of 6) from port B of cell alu.$procmux$87_CMP0 ($eq).
+Removed top 3 bits (of 6) from port B of cell alu.$procmux$88_CMP0 ($eq).
+Removed top 4 bits (of 6) from port B of cell alu.$procmux$89_CMP0 ($eq).
+Removed top 4 bits (of 6) from port B of cell alu.$procmux$90_CMP0 ($eq).
+Removed top 5 bits (of 6) from port B of cell alu.$procmux$91_CMP0 ($eq).
+Removed top 64 bits (of 65) from wire alu.$and$alu.v:51$35_Y.
+Removed top 64 bits (of 65) from wire alu.$and$alu.v:55$42_Y.
+Removed top 64 bits (of 65) from wire alu.$logic_not$alu.v:51$31_Y.
+Removed top 64 bits (of 65) from wire alu.$logic_not$alu.v:51$33_Y.
+Removed top 64 bits (of 65) from wire alu.$logic_not$alu.v:53$41_Y.
+Removed top 64 bits (of 65) from wire alu.$or$alu.v:51$32_Y.
+Removed top 63 bits (of 64) from wire alu.$ternary$alu.v:39$20_Y.
+Removed top 63 bits (of 64) from wire alu.$ternary$alu.v:41$22_Y.
+Removed top 63 bits (of 64) from wire alu.$ternary$alu.v:43$24_Y.
+Removed top 63 bits (of 64) from wire alu.$ternary$alu.v:45$26_Y.
+Removed top 63 bits (of 64) from wire alu.$ternary$alu.v:47$28_Y.
+Removed top 63 bits (of 64) from wire alu.$ternary$alu.v:67$52_Y.
+Removed top 63 bits (of 64) from wire alu.$ternary$alu.v:69$54_Y.
+Removed top 63 bits (of 64) from wire alu.$ternary$alu.v:71$56_Y.
+Removed top 63 bits (of 64) from wire alu.$ternary$alu.v:73$58_Y.
+Removed top 64 bits (of 65) from wire alu.$xor$alu.v:59$44_Y.
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~1 debug messages>
+
+2.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu.
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\alu'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+2.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \alu..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+2.11.4. Finished fast OPT passes.
+
+2.12. Printing statistics.
+
+=== alu ===
+
+   Number of wires:                 83
+   Number of wire bits:           2446
+   Number of public wires:           4
+   Number of public wire bits:     201
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 80
+     $add                            1
+     $and                            3
+     $div                            1
+     $eq                            33
+     $ge                             1
+     $gt                             2
+     $le                             1
+     $logic_not                      4
+     $lt                             2
+     $mul                            1
+     $mux                           10
+     $ne                             2
+     $not                            6
+     $or                             5
+     $pmux                           1
+     $shl                            1
+     $shr                            1
+     $sshl                           1
+     $sshr                           1
+     $sub                            1
+     $xor                            2
+
+2.13. Executing CHECK pass (checking for obvious problems).
+Checking module alu...
+Found and reported 0 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \alu
+
+3.2. Analyzing design hierarchy..
+Top module:  \alu
+Removed 0 unused modules.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: aa0d6462cd, CPU: user 0.25s system 0.02s, MEM: 16.37 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 27% 2x check (0 sec), 25% 5x opt_clean (0 sec), ...

@@ -1,0 +1,1212 @@
+{
+  "$schema": "https://raw.githubusercontent.com/YosysHQ/yosys/master/misc/jny.schema.json",
+  "generator": "Yosys 0.33 (git sha1 2584903a060)",
+  "version": "0.0.1",
+  "invocation": "write_jny -no-connections ../model/design.json ",
+  "features": ["attributes", "properties"],
+  "modules": [
+      {
+        "name": "apb_uart",
+        "cell_sorts": [
+          {
+            "type": "$pmux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [16, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [2, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [8, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$220",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:0.0-0.0|apb_uart.v:115.7-122.14"
+                  },
+                  "parameters": {
+                    "S_WIDTH": "00000000000000000000000000000010",
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$mux",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "S",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procmux$112",
+                  "attributes": {
+                    "src": "apb_uart.v:133.9-133.22|apb_uart.v:133.5-136.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$114",
+                  "attributes": {
+                    "src": "apb_uart.v:133.9-133.22|apb_uart.v:133.5-136.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$117",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$120",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$126",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$128",
+                  "attributes": {
+                    "src": "apb_uart.v:145.14-145.26|apb_uart.v:145.10-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$131",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$133",
+                  "attributes": {
+                    "src": "apb_uart.v:145.14-145.26|apb_uart.v:145.10-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$136",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$148",
+                  "attributes": {
+                    "src": "apb_uart.v:153.11-153.27|apb_uart.v:153.7-159.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$150",
+                  "attributes": {
+                    "src": "apb_uart.v:145.14-145.26|apb_uart.v:145.10-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$153",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$155",
+                  "attributes": {
+                    "src": "apb_uart.v:153.11-153.27|apb_uart.v:153.7-159.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$157",
+                  "attributes": {
+                    "src": "apb_uart.v:145.14-145.26|apb_uart.v:145.10-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$160",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$169",
+                  "attributes": {
+                    "src": "apb_uart.v:153.11-153.27|apb_uart.v:153.7-159.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$171",
+                  "attributes": {
+                    "src": "apb_uart.v:145.14-145.26|apb_uart.v:145.10-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$174",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$183",
+                  "attributes": {
+                    "src": "apb_uart.v:153.11-153.27|apb_uart.v:153.7-159.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$185",
+                  "attributes": {
+                    "src": "apb_uart.v:145.14-145.26|apb_uart.v:145.10-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$188",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$197",
+                  "attributes": {
+                    "src": "apb_uart.v:153.11-153.27|apb_uart.v:153.7-159.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$199",
+                  "attributes": {
+                    "src": "apb_uart.v:145.14-145.26|apb_uart.v:145.10-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$202",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$204",
+                  "attributes": {
+                    "src": "apb_uart.v:161.11-161.26|apb_uart.v:161.7-164.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$206",
+                  "attributes": {
+                    "src": "apb_uart.v:145.14-145.26|apb_uart.v:145.10-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$209",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$211",
+                  "attributes": {
+                    "src": "apb_uart.v:161.11-161.26|apb_uart.v:161.7-164.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$213",
+                  "attributes": {
+                    "src": "apb_uart.v:145.14-145.26|apb_uart.v:145.10-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$216",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:140.9-140.17|apb_uart.v:140.5-165.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$226",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:113.9-113.24|apb_uart.v:113.5-123.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procmux$228",
+                  "attributes": {
+                    "src": "apb_uart.v:102.16-102.53|apb_uart.v:102.12-105.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$231",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:98.11-98.18|apb_uart.v:98.7-105.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$233",
+                  "attributes": {
+                    "src": "apb_uart.v:80.11-80.49|apb_uart.v:80.7-83.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$dff",
+            "ports": [
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$235",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$236",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$237",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$238",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$239",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procdff$240",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$241",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$242",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$244",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$245",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$246",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$248",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$249",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$250",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$252",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$253",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$254",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$256",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$258",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$260",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$261",
+                  "attributes": {
+                    "src": "apb_uart.v:129.3-166.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_or",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_or$apb_uart.v:138$62",
+                  "attributes": {
+                    "src": "apb_uart.v:138.12-138.60"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$apb_uart.v:138$64",
+                  "attributes": {
+                    "src": "apb_uart.v:138.12-138.86"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_or$apb_uart.v:161$76",
+                  "attributes": {
+                    "src": "apb_uart.v:161.11-161.26"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$logic_and$apb_uart.v:102$27",
+                  "attributes": {
+                    "src": "apb_uart.v:102.16-102.53"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$apb_uart.v:113$30",
+                  "attributes": {
+                    "src": "apb_uart.v:113.9-113.24"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_and$apb_uart.v:80$21",
+                  "attributes": {
+                    "src": "apb_uart.v:80.11-80.49"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$apb_uart.v:142$66",
+                  "attributes": {
+                    "src": "apb_uart.v:142.14-142.30"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$apb_uart.v:143$67",
+                  "attributes": {
+                    "src": "apb_uart.v:143.14-143.35"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$logic_not",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [32, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$apb_uart.v:138$60",
+                  "attributes": {
+                    "src": "apb_uart.v:138.12-138.34"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$apb_uart.v:158$74",
+                  "attributes": {
+                    "src": "apb_uart.v:158.16-158.42"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$apb_uart.v:163$77",
+                  "attributes": {
+                    "src": "apb_uart.v:163.16-163.39"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$apb_uart.v:80$20",
+                  "attributes": {
+                    "src": "apb_uart.v:80.29-80.48"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001000",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$apb_uart.v:113$29",
+                  "attributes": {
+                    "src": "apb_uart.v:113.17-113.24"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$apb_uart.v:135$59",
+                  "attributes": {
+                    "src": "apb_uart.v:135.14-135.22"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$logic_not$apb_uart.v:161$75",
+                  "attributes": {
+                    "src": "apb_uart.v:161.11-161.16"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$eq",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [8, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [3, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$eq$apb_uart.v:102$26",
+                  "attributes": {
+                    "src": "apb_uart.v:102.33-102.52"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$apb_uart.v:138$61",
+                  "attributes": {
+                    "src": "apb_uart.v:138.38-138.60"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000011",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$eq$apb_uart.v:138$63",
+                  "attributes": {
+                    "src": "apb_uart.v:138.64-138.86"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000100000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000100",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procmux$221_CMP0",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "apb_uart.v:0.0-0.0|apb_uart.v:115.7-122.14"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000001000",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000100",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$assume",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$assume$apb_uart.v:134$78",
+                  "attributes": {
+                    "src": "apb_uart.v:134.10-135.23"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assume$apb_uart.v:136$79",
+                  "attributes": {
+                    "src": "apb_uart.v:136.8-138.87"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$assert",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "EN",
+                  "direction": "io",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$assert$apb_uart.v:141$80",
+                  "attributes": {
+                    "src": "apb_uart.v:141.10-142.31"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assert$apb_uart.v:142$81",
+                  "attributes": {
+                    "src": "apb_uart.v:142.32-143.36"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assert$apb_uart.v:146$82",
+                  "attributes": {
+                    "src": "apb_uart.v:146.10-148.29"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assert$apb_uart.v:148$83",
+                  "attributes": {
+                    "src": "apb_uart.v:148.30-149.30"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assert$apb_uart.v:154$84",
+                  "attributes": {
+                    "src": "apb_uart.v:154.12-155.36"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assert$apb_uart.v:155$85",
+                  "attributes": {
+                    "src": "apb_uart.v:155.37-156.39"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assert$apb_uart.v:156$86",
+                  "attributes": {
+                    "src": "apb_uart.v:156.40-157.38"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assert$apb_uart.v:157$87",
+                  "attributes": {
+                    "src": "apb_uart.v:157.39-158.43"
+                  },
+                  "parameters": {
+
+                  }
+                },
+                {
+                  "name": "$assert$apb_uart.v:162$88",
+                  "attributes": {
+                    "src": "apb_uart.v:162.12-163.40"
+                  },
+                  "parameters": {
+
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$adff",
+            "ports": [
+                {
+                  "name": "ARST",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "CLK",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "D",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Q",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$procdff$262",
+                  "attributes": {
+                    "src": "apb_uart.v:90.3-107.6"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "0",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$263",
+                  "attributes": {
+                    "src": "apb_uart.v:71.3-85.6"
+                  },
+                  "parameters": {
+                    "ARST_POLARITY": "0",
+                    "ARST_VALUE": "0",
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          },
+          {
+            "type": "$and",
+            "ports": [
+                {
+                  "name": "A",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "B",
+                  "direction": "io",
+                  "range": [0, 0]
+                },
+                {
+                  "name": "Y",
+                  "direction": "",
+                  "range": [0, 0]
+                }
+            ],
+            "cells": [
+                {
+                  "name": "$and$apb_uart.v:65$16",
+                  "attributes": {
+                    "src": "apb_uart.v:65.24-65.38"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$apb_uart.v:65$17",
+                  "attributes": {
+                    "src": "apb_uart.v:65.24-65.47"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$and$apb_uart.v:88$23",
+                  "attributes": {
+                    "src": "apb_uart.v:88.23-88.37"
+                  },
+                  "parameters": {
+                    "A_SIGNED": "00000000000000000000000000000000",
+                    "A_WIDTH": "00000000000000000000000000000001",
+                    "B_SIGNED": "00000000000000000000000000000000",
+                    "B_WIDTH": "00000000000000000000000000000001",
+                    "Y_WIDTH": "00000000000000000000000000000001"
+                  }
+                }
+            ]
+          }
+        ],
+        "attributes": {
+            "keep": "00000000000000000000000000000001",
+            "hdlname": "\\apb_uart",
+            "top": "00000000000000000000000000000001",
+            "src": "apb_uart.v:6.1-169.10"
+        }
+      }
+  ]
+}

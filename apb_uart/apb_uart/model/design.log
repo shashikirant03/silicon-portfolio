@@ -1,0 +1,405 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: apb_uart.v
+Parsing formal SystemVerilog input from `apb_uart.v' to AST representation.
+Storing AST representation for module `$abstract\apb_uart'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\apb_uart'.
+Generating RTLIL representation for module `\apb_uart'.
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \apb_uart
+
+2.2.2. Analyzing design hierarchy..
+Top module:  \apb_uart
+Removing unused module `$abstract\apb_uart'.
+Removed 1 unused modules.
+Module apb_uart directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$apb_uart.v:129$31 in module apb_uart.
+Marked 2 switch rules as full_case in process $proc$apb_uart.v:110$28 in module apb_uart.
+Marked 2 switch rules as full_case in process $proc$apb_uart.v:90$24 in module apb_uart.
+Marked 1 switch rules as full_case in process $proc$apb_uart.v:71$18 in module apb_uart.
+Removed a total of 0 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 20 assignments to connections.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$110'.
+  Set init value: $formal$apb_uart.v:162$15_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$108'.
+  Set init value: $formal$apb_uart.v:157$14_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$106'.
+  Set init value: $formal$apb_uart.v:156$13_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$104'.
+  Set init value: $formal$apb_uart.v:155$12_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$102'.
+  Set init value: $formal$apb_uart.v:154$11_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$100'.
+  Set init value: $formal$apb_uart.v:148$10_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$98'.
+  Set init value: $formal$apb_uart.v:146$9_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$96'.
+  Set init value: $formal$apb_uart.v:142$8_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$94'.
+  Set init value: $formal$apb_uart.v:141$7_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$92'.
+  Set init value: $formal$apb_uart.v:136$6_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:0$90'.
+  Set init value: $formal$apb_uart.v:134$5_EN = 1'0
+Found init rule in `\apb_uart.$proc$apb_uart.v:128$89'.
+  Set init value: \f_past_valid = 1'0
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \PRESETn in `\apb_uart.$proc$apb_uart.v:90$24'.
+Found async reset \PRESETn in `\apb_uart.$proc$apb_uart.v:71$18'.
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~10 debug messages>
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$110'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$108'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$106'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$104'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$102'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$100'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$98'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$96'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$94'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$92'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:0$90'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:128$89'.
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:129$31'.
+     1/20: $0$formal$apb_uart.v:134$5_EN[0:0]$37
+     2/20: $0$formal$apb_uart.v:134$5_CHECK[0:0]$36
+     3/20: $0$formal$apb_uart.v:141$7_EN[0:0]$41
+     4/20: $0$formal$apb_uart.v:141$7_CHECK[0:0]$40
+     5/20: $0$formal$apb_uart.v:142$8_EN[0:0]$43
+     6/20: $0$formal$apb_uart.v:142$8_CHECK[0:0]$42
+     7/20: $0$formal$apb_uart.v:146$9_EN[0:0]$45
+     8/20: $0$formal$apb_uart.v:146$9_CHECK[0:0]$44
+     9/20: $0$formal$apb_uart.v:148$10_EN[0:0]$47
+    10/20: $0$formal$apb_uart.v:148$10_CHECK[0:0]$46
+    11/20: $0$formal$apb_uart.v:154$11_EN[0:0]$49
+    12/20: $0$formal$apb_uart.v:154$11_CHECK[0:0]$48
+    13/20: $0$formal$apb_uart.v:155$12_EN[0:0]$51
+    14/20: $0$formal$apb_uart.v:155$12_CHECK[0:0]$50
+    15/20: $0$formal$apb_uart.v:156$13_EN[0:0]$53
+    16/20: $0$formal$apb_uart.v:156$13_CHECK[0:0]$52
+    17/20: $0$formal$apb_uart.v:157$14_EN[0:0]$55
+    18/20: $0$formal$apb_uart.v:157$14_CHECK[0:0]$54
+    19/20: $0$formal$apb_uart.v:162$15_EN[0:0]$57
+    20/20: $0$formal$apb_uart.v:162$15_CHECK[0:0]$56
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:110$28'.
+     1/2: $2\PRDATA[31:0]
+     2/2: $1\PRDATA[31:0]
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:90$24'.
+     1/1: $0\rx_valid_flag[0:0]
+Creating decoders for process `\apb_uart.$proc$apb_uart.v:71$18'.
+     1/1: $0\tx_start[0:0]
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\apb_uart.\PRDATA' from process `\apb_uart.$proc$apb_uart.v:110$28'.
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\apb_uart.\f_past_valid' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$235' with positive edge clock.
+Creating register for signal `\apb_uart.$past$apb_uart.v:155$1$0' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$236' with positive edge clock.
+Creating register for signal `\apb_uart.$past$apb_uart.v:156$2$0' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$237' with positive edge clock.
+Creating register for signal `\apb_uart.$past$apb_uart.v:157$3$0' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$238' with positive edge clock.
+Creating register for signal `\apb_uart.$past$apb_uart.v:158$4$0' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$239' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:134$5_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$240' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:134$5_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$241' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:136$6_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$242' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:136$6_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$243' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:141$7_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$244' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:141$7_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$245' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:142$8_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$246' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:142$8_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$247' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:146$9_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$248' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:146$9_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$249' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:148$10_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$250' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:148$10_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$251' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:154$11_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$252' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:154$11_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$253' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:155$12_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$254' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:155$12_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$255' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:156$13_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$256' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:156$13_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$257' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:157$14_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$258' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:157$14_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$259' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:162$15_CHECK' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$260' with positive edge clock.
+Creating register for signal `\apb_uart.$formal$apb_uart.v:162$15_EN' using process `\apb_uart.$proc$apb_uart.v:129$31'.
+  created $dff cell `$procdff$261' with positive edge clock.
+Creating register for signal `\apb_uart.\rx_valid_flag' using process `\apb_uart.$proc$apb_uart.v:90$24'.
+  created $adff cell `$procdff$262' with positive edge clock and negative level reset.
+Creating register for signal `\apb_uart.\tx_start' using process `\apb_uart.$proc$apb_uart.v:71$18'.
+  created $adff cell `$procdff$263' with positive edge clock and negative level reset.
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `apb_uart.$proc$apb_uart.v:0$110'.
+Removing empty process `apb_uart.$proc$apb_uart.v:0$108'.
+Removing empty process `apb_uart.$proc$apb_uart.v:0$106'.
+Removing empty process `apb_uart.$proc$apb_uart.v:0$104'.
+Removing empty process `apb_uart.$proc$apb_uart.v:0$102'.
+Removing empty process `apb_uart.$proc$apb_uart.v:0$100'.
+Removing empty process `apb_uart.$proc$apb_uart.v:0$98'.
+Removing empty process `apb_uart.$proc$apb_uart.v:0$96'.
+Removing empty process `apb_uart.$proc$apb_uart.v:0$94'.
+Removing empty process `apb_uart.$proc$apb_uart.v:0$92'.
+Removing empty process `apb_uart.$proc$apb_uart.v:0$90'.
+Removing empty process `apb_uart.$proc$apb_uart.v:128$89'.
+Found and cleaned up 5 empty switches in `\apb_uart.$proc$apb_uart.v:129$31'.
+Removing empty process `apb_uart.$proc$apb_uart.v:129$31'.
+Found and cleaned up 2 empty switches in `\apb_uart.$proc$apb_uart.v:110$28'.
+Removing empty process `apb_uart.$proc$apb_uart.v:110$28'.
+Found and cleaned up 2 empty switches in `\apb_uart.$proc$apb_uart.v:90$24'.
+Removing empty process `apb_uart.$proc$apb_uart.v:90$24'.
+Found and cleaned up 1 empty switch in `\apb_uart.$proc$apb_uart.v:71$18'.
+Removing empty process `apb_uart.$proc$apb_uart.v:71$18'.
+Cleaned up 10 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module apb_uart.
+<suppressed ~33 debug messages>
+
+2.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module apb_uart.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \apb_uart..
+Removed 4 unused cells and 108 unused wires.
+<suppressed ~7 debug messages>
+
+2.6. Executing CHECK pass (checking for obvious problems).
+Checking module apb_uart...
+Warning: Wire apb_uart.\tx is used but has no driver.
+Warning: Wire apb_uart.\rx_done is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [7] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [6] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [5] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [4] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [3] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [2] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [1] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [0] is used but has no driver.
+Warning: Wire apb_uart.\tx_active is used but has no driver.
+Found and reported 11 problems.
+
+2.7. Executing OPT pass (performing simple optimizations).
+
+2.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module apb_uart.
+
+2.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\apb_uart'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \apb_uart..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$223.
+Removed 1 multiplexer ports.
+<suppressed ~23 debug messages>
+
+2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \apb_uart.
+Performed a total of 0 changes.
+
+2.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\apb_uart'.
+<suppressed ~57 debug messages>
+Removed a total of 19 cells.
+
+2.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \apb_uart..
+Removed 0 unused cells and 23 unused wires.
+<suppressed ~1 debug messages>
+
+2.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module apb_uart.
+
+2.7.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \apb_uart..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~17 debug messages>
+
+2.7.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \apb_uart.
+Performed a total of 0 changes.
+
+2.7.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\apb_uart'.
+Removed a total of 0 cells.
+
+2.7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \apb_uart..
+
+2.7.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module apb_uart.
+
+2.7.14. Finished OPT passes. (There is nothing left to do.)
+
+2.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 5 bits (of 8) from port B of cell apb_uart.$eq$apb_uart.v:102$26 ($eq).
+Removed top 29 bits (of 32) from port B of cell apb_uart.$eq$apb_uart.v:138$61 ($eq).
+Removed top 28 bits (of 32) from port B of cell apb_uart.$eq$apb_uart.v:138$63 ($eq).
+Removed top 4 bits (of 8) from port B of cell apb_uart.$procmux$221_CMP0 ($eq).
+Removed top 24 bits (of 32) from mux cell apb_uart.$procmux$220 ($pmux).
+Removed top 24 bits (of 32) from mux cell apb_uart.$procmux$226 ($mux).
+Removed top 24 bits (of 32) from wire apb_uart.$2\PRDATA[31:0].
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \apb_uart..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module apb_uart.
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\apb_uart'.
+Removed a total of 0 cells.
+
+2.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \apb_uart..
+
+2.11.4. Finished fast OPT passes.
+
+2.12. Printing statistics.
+
+=== apb_uart ===
+
+   Number of wires:                 95
+   Number of wire bits:            216
+   Number of public wires:          21
+   Number of public wire bits:     128
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 91
+     $adff                           2
+     $and                            3
+     $assert                         9
+     $assume                         2
+     $dff                           21
+     $eq                             4
+     $logic_and                      3
+     $logic_not                      7
+     $logic_or                       3
+     $mux                           34
+     $not                            2
+     $pmux                           1
+
+2.13. Executing CHECK pass (checking for obvious problems).
+Checking module apb_uart...
+Warning: Wire apb_uart.\tx is used but has no driver.
+Warning: Wire apb_uart.\rx_done is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [7] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [6] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [5] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [4] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [3] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [2] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [1] is used but has no driver.
+Warning: Wire apb_uart.\rx_data_out [0] is used but has no driver.
+Warning: Wire apb_uart.\tx_active is used but has no driver.
+Found and reported 11 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \apb_uart
+
+3.2. Analyzing design hierarchy..
+Top module:  \apb_uart
+Removed 0 unused modules.
+Module apb_uart directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+Warnings: 11 unique messages, 22 total
+End of script. Logfile hash: 7b15eb1ead, CPU: user 0.04s system 0.00s, MEM: 16.36 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 25% 6x opt_expr (0 sec), 21% 5x opt_clean (0 sec), ...

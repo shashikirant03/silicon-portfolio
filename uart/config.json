@@ -1,0 +1,13 @@
+{
+    "DESIGN_NAME": "uart_top",
+    "VERILOG_FILES": [
+        "dir::uart_top.v",
+        "dir::uart_rx.v",
+        "dir::uart_tx.v"
+    ],
+    "CLOCK_PERIOD": 20.0,
+    "CLOCK_PORT": "clk",
+    "FP_SIZING": "relative",
+    "FP_CORE_UTIL": 40,
+    "PL_TARGET_DENSITY": 0.65
+}

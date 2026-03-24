@@ -1,0 +1,61 @@
+SBY 11:20:24 [apb_uart] Removing directory '/home/shashi/rtl_lab/apb_uart/apb_uart'.
+SBY 11:20:24 [apb_uart] Copy '/home/shashi/rtl_lab/apb_uart/apb_uart.v' to '/home/shashi/rtl_lab/apb_uart/apb_uart/src/apb_uart.v'.
+SBY 11:20:24 [apb_uart] engine_0: smtbmc z3
+SBY 11:20:24 [apb_uart] base: starting process "cd apb_uart/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\tx is used but has no driver.
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\rx_done is used but has no driver.
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\rx_data_out [7] is used but has no driver.
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\rx_data_out [6] is used but has no driver.
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\rx_data_out [5] is used but has no driver.
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\rx_data_out [4] is used but has no driver.
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\rx_data_out [3] is used but has no driver.
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\rx_data_out [2] is used but has no driver.
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\rx_data_out [1] is used but has no driver.
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\rx_data_out [0] is used but has no driver.
+SBY 11:20:24 [apb_uart] base: Warning: Wire apb_uart.\tx_active is used but has no driver.
+SBY 11:20:24 [apb_uart] base: finished (returncode=0)
+SBY 11:20:24 [apb_uart] prep: starting process "cd apb_uart/model; yosys -ql design_prep.log design_prep.ys"
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\tx is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\rx_done is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\rx_data_out [7] is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\rx_data_out [6] is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\rx_data_out [5] is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\rx_data_out [4] is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\rx_data_out [3] is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\rx_data_out [2] is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\rx_data_out [1] is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\rx_data_out [0] is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: Warning: Wire apb_uart.\tx_active is used but has no driver.
+SBY 11:20:24 [apb_uart] prep: finished (returncode=0)
+SBY 11:20:24 [apb_uart] smt2: starting process "cd apb_uart/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 11:20:24 [apb_uart] smt2: finished (returncode=0)
+SBY 11:20:24 [apb_uart] engine_0: starting process "cd apb_uart; yosys-smtbmc -s z3 --presat --noprogress -t 10  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 11:20:24 [apb_uart] engine_0: ##   0:00:00  Solver: z3
+SBY 11:20:24 [apb_uart] engine_0: ##   0:00:00  Checking assumptions in step 0..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assertions in step 0..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assumptions in step 1..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assertions in step 1..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assumptions in step 2..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assertions in step 2..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assumptions in step 3..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assertions in step 3..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assumptions in step 4..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assertions in step 4..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assumptions in step 5..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assertions in step 5..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assumptions in step 6..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assertions in step 6..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assumptions in step 7..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assertions in step 7..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assumptions in step 8..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assertions in step 8..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assumptions in step 9..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Checking assertions in step 9..
+SBY 11:20:28 [apb_uart] engine_0: ##   0:00:03  Status: passed
+SBY 11:20:28 [apb_uart] engine_0: finished (returncode=0)
+SBY 11:20:28 [apb_uart] engine_0: Status returned by engine: pass
+SBY 11:20:28 [apb_uart] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:03 (3)
+SBY 11:20:28 [apb_uart] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:03 (3)
+SBY 11:20:28 [apb_uart] summary: engine_0 (smtbmc z3) returned pass
+SBY 11:20:28 [apb_uart] summary: engine_0 did not produce any traces
+SBY 11:20:28 [apb_uart] DONE (PASS, rc=0)
