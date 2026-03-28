@@ -5,13 +5,13 @@ module rv32i_core (
     input wire reset
 );
 
-    // --- 1. Internal Wires ---
+    // Internal Wires 
     wire [31:0] pc, pc_next, pc_plus4, instr;
     wire [31:0] rd1, rd2, wd, alu_result, read_data, imm_ext;
     wire [3:0]  alu_ctrl;
     wire        wen, alu_src, mem_write, result_src, branch, alu_zero;
 
-    // --- 2. Program Counter Logic (The "Next PC" math) ---
+    // Program Counter Logic 
     assign pc_plus4 = pc + 4;
     assign pc_next = (branch && alu_zero) ? (pc + imm_ext) : pc_plus4;
 
@@ -22,13 +22,13 @@ module rv32i_core (
         .pc(pc)
     );
 
-    // --- 3. Instruction Fetch ---
+    // Instruction Fetch 
     instruction_memory imem_inst (
         .pc(pc),
         .instruction(instr)
     );
 
-    // --- 4. Control Unit (The Brain) ---
+    // Control Unit 
     control_unit cu_inst (
         .opcode(instr[6:0]),
         .funct3(instr[14:12]),
@@ -41,8 +41,7 @@ module rv32i_core (
         .alu_ctrl(alu_ctrl)
     );
 
-    // --- 5. Register File ---
-    // Note: wd (Write Data) comes from either the ALU or the RAM
+    // Register File
     assign wd = (result_src) ? read_data : alu_result;
 
     register_file rf_inst (
@@ -56,11 +55,10 @@ module rv32i_core (
         .rd2(rd2)
     );
 
-    // --- 6. Immediate Generation (Sign Extension) ---
-    // This turns the 12-bit immediate from the instruction into a 32-bit number
+    // Immediate Generation (Sign Extension) 
     assign imm_ext = {{20{instr[31]}}, instr[31:20]}; 
 
-    // --- 7. ALU ---
+    // ALU 
     wire [31:0] alu_input_b = (alu_src) ? imm_ext : rd2;
 
     alu alu_inst (
@@ -71,7 +69,7 @@ module rv32i_core (
         .zero(alu_zero)
     );
 
-    // --- 8. Data Memory ---
+    // Data Memory 
     data_memory dmem_inst (
         .clk(clk),
         .wen(mem_write),
