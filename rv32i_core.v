@@ -64,7 +64,7 @@ module rv32i_core (
     alu alu_inst (
         .a(rd1),
         .b(alu_input_b),
-        .alucntrl(alu_ctrl),
+        .alu_ctrl(alu_ctrl),
         .result(alu_result),
         .zero(alu_zero)
     );
