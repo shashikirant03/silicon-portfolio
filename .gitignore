@@ -1,2 +1,9 @@
-*_sim
+# Simulation Output Files
+*.vvp
 *.vcd
+*.out
+
+# C Compiler Output Files
+*.elf
+*.bin
+*.hex
