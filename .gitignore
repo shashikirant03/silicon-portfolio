@@ -1,4 +1,5 @@
 # Simulation Output Files
+*_sim
 *.vvp
 *.vcd
 *.out
